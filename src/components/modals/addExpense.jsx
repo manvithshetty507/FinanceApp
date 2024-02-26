@@ -16,6 +16,7 @@ function AddExpenseModal({ open, onCancel, onFinish}) {
             onFinish={(values) => {
                 onFinish(values,"expense")
                 form.resetFields()
+                onCancel()
             }}
         >
             <Form.Item 

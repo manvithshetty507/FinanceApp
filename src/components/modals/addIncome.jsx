@@ -16,6 +16,7 @@ function AddIncomeModal({open,onCancel, onFinish}) {
             onFinish={(values) => {
                 onFinish(values,"income")
                 form.resetFields()
+                onCancel()
             }}
         >
             <Form.Item 
