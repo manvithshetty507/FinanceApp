@@ -8,3 +8,9 @@
 .heading {
     color: var(--font-color);
 }
+
+@media(max-width:600px) {
+    .charts{
+        flex-direction: column;
+    }
+}

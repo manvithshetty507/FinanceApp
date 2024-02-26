@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import Cards from '../components/cards'
-import { Modal } from 'antd'
+import { Button, Modal } from 'antd'
 import AddIncomeModal from '../components/modals/addIncome'
 import { addDoc, collection } from 'firebase/firestore'
 import { auth, db } from '../firebase'
@@ -11,12 +11,14 @@ import TransactionTable from '../components/table'
 import ModalContext from '../context/ModalContext.jsx'
 import Charts from '../components/charts/index.jsx'
 import NoTransaction from '../components/noTransaction/index.jsx'
+import { useNavigate } from 'react-router-dom'
 
 function DashBoard() {
 
   const user = useAuthState(auth)
   const { onFinish, transactions, fetchTrasactionData, calculateBalance, income, expense, currentBalance} = useContext(ModalContext)
  
+  const navigate = useNavigate()
   const [isShowExpenseModal, setIsShowExpenseModal] = useState(false)
   const [isShowIncomeModal, setIsShowIncomeModal] = useState(false)
 
@@ -37,8 +39,16 @@ function DashBoard() {
   const handleIncomeCancel = () => {
     setIsShowIncomeModal(false)
   }
-
-
+  if(!user[0]) {
+    console.log("inside user",user)
+    return (
+      <div style={{margin:'1rem'}}>
+        <h1>Please Login</h1>
+        <button onClick={() => navigate("/")}>Go Back</button>
+      </div>
+    )
+  }
+  else {
   return (
     <div>
       <Cards
@@ -65,6 +75,7 @@ function DashBoard() {
       <TransactionTable transactions={transactions}/>
     </div>
   )
+  }
 }
 
 export default DashBoard
