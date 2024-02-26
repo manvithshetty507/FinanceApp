@@ -1,0 +1,10 @@
+.charts {
+    display: flex;
+    margin: 1rem;
+    padding: 0.3rem;
+    gap: 10px;
+}
+
+.heading {
+    color: var(--font-color);
+}

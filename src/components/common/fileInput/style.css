@@ -1,0 +1,30 @@
+.custom__input {
+    margin: 1.3rem;
+    width: 90%;
+    font-size: 0.7rem;
+}
+
+.custom__input > input, .label{
+    border: 2px solid var(--font-color);
+    color: var(--white);
+    background-color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    outline: none;
+}
+
+.label {
+    color: var(--font-color) ;
+    border: 2px dotted var(--font-color);
+    text-align: center;
+}
+
+.custom__input > input:focus {
+    outline: none;
+    border-color: var(--font-color);
+}
+
+.custom__input > input::placeholder {
+    color: var(--font-color);
+}

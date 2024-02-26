@@ -1,0 +1,36 @@
+.btn {
+    color: var(--font-color);
+    background-color: var(--primary-color);
+    padding: 0.6rem;
+    text-align: center;
+    width: 100%;
+    margin: 0.5rem 0;
+    border: none;
+    border: 1px solid var(--font-color);
+    border-radius: 0.25rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto !important;
+    margin-top: 1rem;
+}
+
+.btn:hover {
+    background-color: #888888;
+    opacity: 0.8;
+    color: var(--font-color);
+    outline: none;
+    transition: all 0.3s;
+}
+
+.btn-green {
+    background-color: greenyellow;
+    color: black;
+}
+
+.btn-green:hover {
+    background-color: var(--primary-color);
+    color: var(--font-color);
+    transition: all 0.3s;
+}

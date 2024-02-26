@@ -1,0 +1,20 @@
+.input__box {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--font-color);
+    padding: 0.5rem;
+    background-color: var(--primary-color);
+    opacity: 0.8;
+    color: var(--font-color);
+  }
+  
+  .input__box::placeholder {
+    color: var(--font-color);
+    opacity: 0.7;
+  }
+  
+  .input__box:focus {
+    opacity: 1;
+    transition: all 0.2s;
+  }
+  

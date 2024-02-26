@@ -1,0 +1,32 @@
+.card {
+    box-shadow: var(--shadow);
+    flex: 0.3;
+    font-family: "Montserrat", sans-serif;
+    padding: 0 !important;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    align-items: center;
+    margin: 2rem auto;
+}
+.header {
+    padding: 0;
+    margin: 0;
+}
+
+.card > p {
+    margin: 0.2rem;
+}
+
+@media (max-width: 600px) {
+    .card {
+        width: 70%;
+    }
+    .row {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
